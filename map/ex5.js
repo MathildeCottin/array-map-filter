@@ -7,12 +7,24 @@ Ecrire une fonction multiplyOddIndices, qui prend en entrée un tableau de nombr
 Il va donc falloir utiliser le 2ème argument de la fonction passée à map.
 
 Exemple de tableau d'entrée:
-  [3, 8, 11, 13, 19, 7]
+  [3, 8, 11, 13, 19, 7]nombre%2 == 0
 Tableau renvoyé par multiplyOddIndices:
   [3, 8, 11, 39, 19, 35]
 */
 
 function multiplyOddIndices(numbers) {
-}
+   return numbers.map(function(numb, index) {
+   if (index%2 !== 0) {
+     return numb * index
+   }  
+   else {
+     return numb
+   }
+     
+  }
+  )
+}  
+
+
 
 module.exports = multiplyOddIndices;
